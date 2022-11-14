@@ -28,7 +28,7 @@ export default HomePage
 
 
 const StyledHeader = styled.div`
-    img {
+    .profile {
         width: 80px;
         height: 80px;
         border-radius: 50%;
@@ -41,13 +41,19 @@ const StyledHeader = styled.div`
         padding: 16px 32px;
         gap: 16px;
     }
+
+    .banner {
+        width: 99%;
+        height: 50%;
+        object-fit: cover;
+    }
 `;
 function Header() {
     return (
         <StyledHeader>
-            <img></img>
+            <img src="https://images.unsplash.com/photo-1560415755-bd80d06eda60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=991&q=80" className="banner"></img>
             <selection className="user-info">
-                <img src={`https://github.com/${config.github}.png`}></img>
+                <img src={`https://github.com/${config.github}.png`} className="profile"></img>
 
                 <div>
                     <h2>
